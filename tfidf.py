@@ -52,4 +52,10 @@ def get_relevant_words(text):
     return result
 
 
+def choose_answer(key):
+    relevance = tfidf(key, texts)
+    answer_index = relevance.index(max(relevance))
+    return texts[answer_index]
+
+
 texts = [open("texts/" + str(name), "r").read() for name in range(1, 18)]

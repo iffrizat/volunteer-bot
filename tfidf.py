@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import string
 import pymorphy2
 morph = pymorphy2.MorphAnalyzer()

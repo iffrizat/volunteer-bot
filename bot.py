@@ -5,7 +5,6 @@ from tfidf import choose_answer
 updater = Updater(token="epic_token")
 dispatcher = updater.dispatcher
 
-# Простое повторение сообщения
 def echo(update: Update, context: CallbackContext):
     answer = choose_answer(update.message.text)
     update.message.reply_text(answer)

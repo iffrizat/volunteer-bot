@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import CallbackContext, Updater, MessageHandler, Filters
+from telegram.ext import CallbackContext, Updater, MessageHandler, CommandHandler, Filters
 from tfidf import choose_answer
 
 

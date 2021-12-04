@@ -13,7 +13,7 @@
 - `pymorphy2`
 - `stopwords`
 
-Их можно установить коммандой `pip install python-telegram-bot numpy pymorphy2 stopwords`
+Их можно установить командой `pip install python-telegram-bot numpy pymorphy2 stopwords`
 
 ### 2. Токен
 Для любого Telegram-бота необходим токен доступа, который (как и сам аккаунт бота) можно получить у [BotFather](https://t.me/botfather).
@@ -22,6 +22,6 @@
 
 
 ### 3. Запуск
-После смены токена на ваш собственный, бота можно запустить коммандой `python bot.py`.
+После смены токена на ваш собственный, бота можно запустить командой `python bot.py`.
 
 

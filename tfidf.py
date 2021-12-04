@@ -7,6 +7,7 @@ stop_words = get_stop_words("russian")
 
 
 def lemmatize_word(word):
+    # Возвращает нормальную форму слова
     for s in string.punctuation:
         word = word.replace(s, "")
     morph_analyze = morph.parse(word.lower())
@@ -14,6 +15,7 @@ def lemmatize_word(word):
 
 
 def lemmatize_text(text):
+    # Лемматизирует текст
     if isinstance(text, str):
         text = text.split()
     normal_text = [lemmatize_word(w) for w in text if w not in stop_words]
@@ -47,7 +49,8 @@ def tfidf(key, documents):
 def choose_answer(key):
     relevance = tfidf(key, texts)
     answer_index = relevance.index(max(relevance))
-    return texts[answer_index]
+    return answers[answer_index]
 
 
 texts = [open("texts/" + str(name), "r").read() for name in range(1, 18)]
+answers = [open("answers/" + str(name), "r").read() for name in range(1, 18)]
